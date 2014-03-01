@@ -64,13 +64,6 @@ void kirkwood_pm_init(void);
 static inline void kirkwood_pm_init(void) {};
 #endif
 
-/* board init functions for boards not fully converted to fdt */
-#ifdef CONFIG_MACH_MV88F6281GTW_GE_DT
-void mv88f6281gtw_ge_init(void);
-#else
-static inline void mv88f6281gtw_ge_init(void) {};
-#endif
-
 /* early init functions not converted to fdt yet */
 char *kirkwood_id(void);
 void kirkwood_l2_init(void);

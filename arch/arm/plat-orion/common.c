@@ -256,7 +256,9 @@ static __init void ge_complete(
 /*****************************************************************************
  * GE00
  ****************************************************************************/
-struct mv643xx_eth_shared_platform_data orion_ge00_shared_data;
+struct mv643xx_eth_shared_platform_data orion_ge00_shared_data = {
+	.tx_csum_limit	= 1600,
+};
 
 static struct resource orion_ge00_shared_resources[] = {
 	{
